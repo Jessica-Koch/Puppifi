@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-
+gem 'omniauth'
+gem 'omniauth-linkedin-oauth2'
 gem 'doorkeeper'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -33,9 +34,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+   #.env gem
+  gem 'dotenv-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
+  gem 'pry-rails'
+  gem 'pry', '~> 0.10.1'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
