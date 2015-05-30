@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 gem 'omniauth'
 gem 'omniauth-linkedin-oauth2'
-gem 'doorkeeper'
+# gem 'doorkeeper'
 gem 'paperclip', '~> 4.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
