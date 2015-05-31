@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+#integrate rails and EmberCLI
+gem "ember-cli-rails"
 # gem 'omniauth'
 # gem 'omniauth-linkedin-oauth2'
 # gem 'doorkeeper'
