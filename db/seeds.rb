@@ -8,3 +8,7 @@
 @users = 20.times do
   User.create(name: Faker::Name.name, email: Faker::Internet.email)
 end
+
+@dogs = 20.times do
+  Dog.create(name: Faker::Lorem.word, age: Faker::Number.digit, gender: 'male', user_id: Faker::Number.digit)
+end
