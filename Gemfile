@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'active_model_serializers'
+gem 'active_model_serializers', '~> 0.10.0.rc1'
 # gem 'omniauth'
 # gem 'omniauth-linkedin-oauth2'
 # gem 'doorkeeper'
