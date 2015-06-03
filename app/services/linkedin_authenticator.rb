@@ -19,7 +19,7 @@ class LinkedinAuthenticator
 
 # used to extract login fron linkedin and our name method
   def linkedin_client
-    Omniauth::Client.new(access_token: access_token)
+    OmniAuth::Client.new(access_token: access_token)
   end
 
   def access_token
