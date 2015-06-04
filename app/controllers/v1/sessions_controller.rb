@@ -17,7 +17,7 @@ module V1
     private
 
     def linkedin_auth_code
-      params.require(:'linked-in-auth-code')
+      params.require(:'linkedin-auth-code')
     end
   end
 end

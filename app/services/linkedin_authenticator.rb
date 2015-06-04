@@ -2,7 +2,7 @@ require "net/http"
 require "net/https"
 
 class LinkedinAuthenticator 
-  LINKED_IN_OAUTH_PATH = " https://api.linkedin.com/uas/oauth/requestToken"
+  LINKED_IN_OAUTH_PATH = " https://localhost:4200"
 
   def initialize(auth_code)
     @auth_code = auth_code
@@ -20,7 +20,7 @@ class LinkedinAuthenticator
   end
 
   def linkedin_client
-    OmniAuth::Client.new(access_token: access_token)
+    OAuth2::Client.new(access_token: access_token)
   end
 
   def access_token
