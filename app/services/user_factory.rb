@@ -1,6 +1,6 @@
-class UserFactory 
+class UserFactory
   def initialize(authenticator)
-    @authenticator = authenticator 
+    @authenticator = authenticator
   end
 
   def find_or_create_user

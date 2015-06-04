@@ -5,7 +5,7 @@ module V1
 
     def create 
       # create a new instance of Linkedinauthenticator class passed auth token
-      linkedin_authenticator = LinkedinAuthenticator.new(linkedin_auth_code)
+      linkedin_authenticator = LinkedinAuthenticator.new(linked_in_auth_code)
       # passes the instance of githubauthenticator to instantiate a class that does not yet exist (userfactory)
       # user factory returns a user  
       user_factory = UserFactory.new(linkedin_authenticator)
@@ -16,8 +16,8 @@ module V1
 
     private
 
-    def linkedin_auth_code
-      params.require(':linkedin_auth_code')
+    def linked_in_auth_code
+      params.require(:'linked_in_auth_code')
     end
   end
 end
