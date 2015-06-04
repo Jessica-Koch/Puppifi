@@ -2,7 +2,7 @@ require "net/http"
 require "net/https"
 
 class LinkedinAuthenticator 
-  LINKED_IN_OAUTH_PATH = " https://localhost:4200"
+  LINKED_IN_OAUTH_PATH = "http://localhost:4200/auth/linkedin/callback"
 
   def initialize(auth_code)
     @auth_code = auth_code
