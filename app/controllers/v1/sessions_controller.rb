@@ -1,11 +1,11 @@
 module V1
   # session controller can fetch old sessions 
-  class SessionsController < ApplicationController 
+  class SessionsController < ApplicationController
     # skipped because ember and rails are on different domains
-    skip_before_action :verify_authenticity_token 
+    skip_before_action :verify_authenticity_token
 
-    def create 
-      if fetch_or_create_user
+    def create
+      if user
         render json: user, status: :created
       else
         render nothing: true, status: :bad_request
@@ -13,6 +13,10 @@ module V1
     end
 
     private
+    def user
+      @_user ||= fetch_or_create_user
+    end
+
     def fetch_or_create_user
       if linkedin_auth_code
         find_or_create_user_from_linkedin
@@ -20,6 +24,7 @@ module V1
         User.find_by(token: token)
       end
     end
+
 
     def find_or_create_user_from_linkedin
       # create a new instance of Linkedinauthenticator class passed auth token
@@ -35,7 +40,7 @@ module V1
     end
 
     def linkedin_auth_code
-      @_linkedin_auth_code ||= session_params[:'linkedin_auth_code']
+      @_linkedin_auth_code ||= session_params[:'linkedin-auth-code']
     end
 
     def session_params
