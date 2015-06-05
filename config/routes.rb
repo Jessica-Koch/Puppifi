@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   namespace :v1 do
+    # where github is posting temp token to:
     resources :sessions, only: [:create]
   end
   # The priority is based upon order of creation: first created -> highest priority.

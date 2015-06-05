@@ -29,9 +29,13 @@ module V1
     def find_or_create_user_from_linkedin
       # create a new instance of Linkedinauthenticator class passed auth token
       linkedin_authenticator = LinkedinAuthenticator.new(linkedin_auth_code)
-      # passes the instance of githubauthenticator to instantiate a class that does not yet exist (userfactory)
+      # passes the instance of githubauthenticator to instantiate 
+      #a class that does not yet exist (userfactory)
       # user factory returns a user  
       user_factory = UserFactory.new(linkedin_authenticator)
+      #find_or_create_user call on user_factory should return a user
+      #rendered as json with a status of created, always created because letting
+      #browser know it is a new session
       user_factory.find_or_create_user
     end
 
