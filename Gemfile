@@ -17,7 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'rack-cors'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+gem 'rails-api', require: 'rails-api/action_controller/api'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

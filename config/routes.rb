@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  match '/*path' => 'application#cors_preflight_check', :via => :options
   namespace :v1 do
     # where github is posting temp token to:
     resources :sessions, only: [:create]

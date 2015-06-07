@@ -1,11 +1,11 @@
-module V1
+# module V1
   # session controller can fetch old sessions 
-  class SessionsController < ApplicationController
+  class V1::SessionsController < ApplicationController
     # skipped because ember and rails are on different domains
     skip_before_action :verify_authenticity_token
 
     def create
-      linkedin_authenticator = LinkedinAuthenticator.new(linkedin_auth_code)
+      linkedin_authenticator = LinkedinAuthenticator.new('linkedin_auth_code')
       user_factory = UserFactory.new(linkedin_authenticator)
       user_factory.find_or_create_user
 
@@ -19,4 +19,3 @@ module V1
       params.require(:'linkedin_auth_code')
     end
   end
-end

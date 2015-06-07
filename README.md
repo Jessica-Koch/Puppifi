@@ -3,4 +3,4 @@
 
 heroku: https://fetchrr.herokuapp.com
 
-
+rails s -p9000
