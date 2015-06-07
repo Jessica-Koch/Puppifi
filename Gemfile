@@ -14,14 +14,15 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'rack-cors'
+gem 'rack-cors', require: 'rack/cors'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails-api', require: 'rails-api/action_controller/api'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'ember-rails'
-gem 'ember-source', '~> 1.9.0'
+gem 'grape'
+gem "grape-active_model_serializers"
+gem "grape-swagger-rails"
 # Use Unicorn as the app server
 # gem 'unicorn'
 
