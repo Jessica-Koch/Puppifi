@@ -20,7 +20,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails-api', require: 'rails-api/action_controller/api'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'ember-rails'
+gem 'ember-source', '~> 1.9.0'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
