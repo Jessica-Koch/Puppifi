@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-  match '/*path' => 'application#cors_preflight_check', :via => :options
-  namespace :v1 do
-    # where github is posting temp token to:
-    resources :sessions, only: [:create]
-  end
+
+  mount API::Base, at: '/'
+  mount GrapeSwaggerRails::Engine, at: '/documentation'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
