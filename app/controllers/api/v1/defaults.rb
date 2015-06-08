@@ -1,8 +1,8 @@
-# utilizing ActiveSupport::Concern to inject behavior into Grape::API classes 
 # included block sets up prefix, version and some formatting 
 module API
   module V1
     module Defaults
+      # used to inject behavior into Grape::API classes
       extend ActiveSupport::Concern
 
       included do
