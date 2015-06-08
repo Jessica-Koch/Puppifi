@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
  gem 'active_model_serializers', '0.9.3'
- gem 'faker'
  gem 'omniauth'
  gem 'omniauth-linkedin-oauth2'
  gem 'paperclip', '~> 4.1'
@@ -30,7 +29,12 @@ gem "grape-swagger-rails"
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-   #.env gem
+  gem "capybara"
+  gem "capybara-screenshot"
+  gem "database_cleaner"
+  gem "factory_girl_rails"
+  gem "faker"
+#.env gem
   gem 'dotenv-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -41,5 +45,13 @@ group :development, :test do
   gem "shoulda-matchers"
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem "poltergeist"
+  gem "pry-nav"
+  gem "pry-stack_explorer"
+  gem "pry-theme"
+  gem "rspec-rails"
+  gem "rubocop"
+  gem "spring-commands-rspec"
+
 end
 
