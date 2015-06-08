@@ -13,7 +13,6 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'rack-cors', require: 'rack/cors'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails-api', require: 'rails-api/action_controller/api'
@@ -29,6 +28,8 @@ gem 'grape-swagger-rails'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem 'rack-cors', require: 'rack/cors'
+
   gem 'capybara'
   gem 'capybara-screenshot'
   gem 'database_cleaner'
