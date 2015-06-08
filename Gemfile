@@ -20,8 +20,8 @@ gem 'rails-api', require: 'rails-api/action_controller/api'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'grape'
-gem "grape-active_model_serializers"
-gem "grape-swagger-rails"
+gem 'grape-active_model_serializers'
+gem 'grape-swagger-rails'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -29,11 +29,11 @@ gem "grape-swagger-rails"
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  gem "capybara"
-  gem "capybara-screenshot"
-  gem "database_cleaner"
-  gem "factory_girl_rails"
-  gem "faker"
+  gem 'capybara'
+  gem 'capybara-screenshot'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'faker'
 #.env gem
   gem 'dotenv-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -42,16 +42,16 @@ group :development, :test do
   gem 'pry', '~> 0.10.1'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-  gem "shoulda-matchers"
+  gem 'shoulda-matchers'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem "poltergeist"
-  gem "pry-nav"
-  gem "pry-stack_explorer"
-  gem "pry-theme"
-  gem "rspec-rails"
-  gem "rubocop"
-  gem "spring-commands-rspec"
+  gem 'poltergeist'
+  gem 'pry-nav'
+  gem 'pry-stack_explorer'
+  gem 'pry-theme'
+  gem 'rspec-rails', '~> 3.0'
+  gem 'rubocop'
+  gem 'spring-commands-rspec'
 
 end
 

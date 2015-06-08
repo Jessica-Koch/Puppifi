@@ -315,7 +315,7 @@ DEPENDENCIES
   rack-cors
   rails (= 4.2.1)
   rails-api
-  rspec-rails
+  rspec-rails (~> 3.0)
   rubocop
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
