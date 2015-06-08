@@ -23,12 +23,12 @@ gem 'grape-active_model_serializers'
 gem 'grape-swagger-rails'
 # Use Unicorn as the app server
 # gem 'unicorn'
+gem 'rack-cors', require: 'rack/cors'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  gem 'rack-cors', require: 'rack/cors'
 
   gem 'capybara'
   gem 'capybara-screenshot'
