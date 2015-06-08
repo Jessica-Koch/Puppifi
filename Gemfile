@@ -18,7 +18,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails-api', require: 'rails-api/action_controller/api'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'grape', '0.9.0'
+gem 'grape'
 gem 'grape-active_model_serializers'
 gem 'grape-swagger-rails'
 # Use Unicorn as the app server
