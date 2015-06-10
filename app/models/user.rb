@@ -1,15 +1,29 @@
 class User < ActiveRecord::Base
-  validates :name, presence: true, uniqueness: true
+  has_many :access_tokens, dependent: :destroy
   has_many :dogs, dependent: :destroy
 
-  before_create :generate_token
+  validates :name, presence: true, uniqueness: true
+  validates :email, presence: true
+  validates :provider, presence: true
+  validates :uid, presence: true, uniqueness: { scope: :provider }
 
-  protected
 
-  def generate_token
-    self.token = loop do
-      random_token = SecureRandom.urlsafe_base64(nil, false)
-      break random_token unless User.exists?(token: random_token)
+  def access_token
+    access_tokens.active.first
+  end
+
+  def self.find_or_create_from_oauth(oauth)
+    attributes = {
+      email: oauth.email,
+      provider: 'github',
+      uid: oauth.id.to_s,
+      username: oauth.login,
+    }
+
+    where(attributes.slice(:uid, :provider)).first_or_initialize.tap do |u|
+      u.email = attributes[:email]
+      u.username = attributes[:username]
+      u.save
     end
   end
 end

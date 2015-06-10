@@ -2,7 +2,9 @@ require "net/http"
 require "net/https"
 
 class LinkedinAuthenticator 
-  LINKED_IN_OAUTH_PATH = "https://linkedin.com/uas/oauth2/authorization?response_type=code"
+  # LINKED_IN_OAUTH_PATH = "https://linkedin.com/uas/oauth2/authorization?response_type=code"
+
+  LINKED_IN_OAUTH_PATH = "https://linkedin.com/login/oauth/access_token"
 
   def initialize(auth_code)
     @auth_code = auth_code
